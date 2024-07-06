@@ -8,6 +8,7 @@
             <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.hbm2ddl.jdbc_metadata_extraction_strategy" value="individually"/>
         </properties>
     </persistence-unit>
 </persistence>
