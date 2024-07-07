@@ -5,17 +5,17 @@ import jakarta.json.bind.annotation.JsonbPropertyOrder;
 @JsonbPropertyOrder({ "palavra", "ocorrencia" })
 public class PalavraResponse {
 	
-	private String palavra;
+	private String texto;
 	
 	private int ocorrencia;
 	
-	public PalavraResponse(String palavra, int ocorrencia) {
-		this.palavra = palavra;
+	public PalavraResponse(String texto, int ocorrencia) {
+		this.texto = texto;
 		this.ocorrencia = ocorrencia;
 	}
 
-	public String getPalavra() {
-		return palavra;
+	public String getTexto() {
+		return texto;
 	}
 
 	public int getOcorrencia() {

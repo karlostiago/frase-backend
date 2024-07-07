@@ -63,6 +63,8 @@
         <version>9.1.0</version>
         <scope>provided</scope>
     </dependency>
+    
+    <!-- Tests -->
     <dependency>
       	<groupId>junit</groupId>
       	<artifactId>junit</artifactId>

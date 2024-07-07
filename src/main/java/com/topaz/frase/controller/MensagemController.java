@@ -1,7 +1,7 @@
 package com.topaz.frase.controller;
 
 import com.topaz.frase.exception.FraseInvalidaException;
-import com.topaz.frase.input.FraseInput;
+import com.topaz.frase.input.MensagemInput;
 import com.topaz.frase.jms.MensagemProducer;
 import com.topaz.frase.service.MensagemService;
 
@@ -15,7 +15,7 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 @Path("/mensagem")
-public class AnaliseFraseController {
+public class MensagemController {
 	
 	@Inject
 	private MensagemService mensagemService;
@@ -27,7 +27,7 @@ public class AnaliseFraseController {
 	@Path("/analisar")
 	@Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-	public Response analise(FraseInput input) {
+	public Response analise(MensagemInput input) {
 		
 		if (input == null || input.getTexto() == null ||  input.getTexto().trim().isEmpty()) {
 			throw new FraseInvalidaException("O campo texto não pode ser vázio.");

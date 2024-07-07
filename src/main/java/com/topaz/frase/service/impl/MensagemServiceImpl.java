@@ -19,6 +19,12 @@ public class MensagemServiceImpl implements MensagemService {
 	
 	@Inject
 	private MensagemRepository mensagemRepository;
+	
+	public MensagemServiceImpl() { }
+	
+	public MensagemServiceImpl(MensagemRepository mensagemRepository) {
+		this.mensagemRepository = mensagemRepository;
+	}
 
 	@Override
 	public synchronized void processar(String mensagem) {
