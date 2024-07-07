@@ -1,6 +1,6 @@
 package com.topaz.frase.controller;
 
-import com.topaz.frase.exception.FraseInvalidaException;
+import com.topaz.frase.exception.MensagemInvalidaException;
 import com.topaz.frase.input.MensagemInput;
 import com.topaz.frase.jms.MensagemProducer;
 import com.topaz.frase.service.MensagemService;
@@ -30,7 +30,7 @@ public class MensagemController {
 	public Response analise(MensagemInput input) {
 		
 		if (input == null || input.getTexto() == null ||  input.getTexto().trim().isEmpty()) {
-			throw new FraseInvalidaException("O campo texto não pode ser vázio.");
+			throw new MensagemInvalidaException("O campo texto não pode ser vázio.");
 		}
 		
 		mensagemProducer.enviarMensagem(input.getTexto());
